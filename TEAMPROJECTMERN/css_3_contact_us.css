@@ -1,0 +1,155 @@
+ 
+
+    *{
+        font-style: italic;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 100;
+    }
+
+    body{
+        margin: 0;
+        padding:0;
+        background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("https://unsplash.com/photos/5U_28ojjgms/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjYwMjAwNDM4&force=true&w=1920");
+        background-size:cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .card{
+        background-color: #fff;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        border-radius:20px;
+        margin: 20px 60px;
+    }
+
+    .card li{
+        padding: 5px 0;
+    }
+
+    .card img{
+        height: 350px;
+        object-fit: cover;
+        padding: 0;
+        margin: 0;
+    }
+
+    .card:hover{
+        box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.693);
+        transition: 0.5s;
+    }
+
+    @media screen and (max-width: 800px){
+
+        body{
+            text-align: center;
+        }
+
+        h2,p{
+            text-align: left;
+        }
+        .card img{
+            width:  200px;
+            height: 200px;
+            object-fit: cover;
+            padding: 0;
+            margin: 0;
+        }
+
+    }
+     
+     button{
+        padding: 10px;   
+        font-size: 15px;
+        border-radius: 5px;
+        border: none;
+     }
+
+     button:hover{
+        background-color:#61b752 ;
+        color:#fff;
+        transition: 0.4s;
+     }
+     
+     button a:hover{
+        color:#fff;
+     }
+
+    .main{
+        margin-top:20px ;
+    }
+        
+    .slide{
+        margin-top: 40px;
+    }
+    
+    marquee{
+        font-size: x-large;
+        color: #fff;
+    }
+
+    .header{
+        background-color: #fff;
+        height: 100%;
+        padding-top:8px ;
+    }
+
+    .header img{
+        width:170px;
+        float:left;
+        margin-left: 5%;
+        box-shadow: 0 8px 10px 0 rgba(0,0,0,0.6);
+    }
+
+    .header h1{
+        text-align: right;
+        font-size: 35px;
+        padding: 20px;
+        color: #000;
+        word-spacing: 0.2em;
+        cursor:pointer;
+    }
+
+    button:hover{
+        color:black;
+        background-color: #ddd;
+        transition: 0.5s;
+    }
+
+    .header .logo{
+        padding-left:8% ;
+    }
+
+    /* ==================NAvigation Bar======================== */
+    nav{
+        margin-top:8% ;
+        padding: 10px;
+    }
+
+    nav a{
+        margin-left: 5%;
+        padding: 10px 0;
+        color: #fff;
+        font-size: 20px;
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    a:hover{
+        color:rgba(253, 0, 0, 0.916);
+        transition: 0.5s;
+    }
+
+    hr{
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .about-team{
+        display: flex;
+        flex-direction: row;
+    }
