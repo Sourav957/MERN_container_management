@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTAINER MANAGEMENT | Home Page</title>
+
+      <!---=========== Favicon==================-->
+      <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+      <link rel="manifest" href="Favicon/site.webmanifest">
+
+    <style>
+
+    *{
+        font-style: italic;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 100;
+    }
+
+    body{
+            margin: 0;
+            padding:0;
+            background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("https://unsplash.com/photos/5U_28ojjgms/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjYwMjAwNDM4&force=true&w=1920");
+            background-size:cover;
+            background-position: center;
+            background-attachment: fixed;
+    }
+
+    /* ================= For creating the cards =========================  */
+    .card{
+        background-color: #fff;
+        width: 30%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        border-radius:20px;
+        margin: 10px;
+    }
+
+    .card img{
+        width:  450px;
+        height: 250px;
+        object-fit: cover;
+        padding: 0;
+        margin: 0;
+    }
+
+    .card:hover{
+        cursor:pointer;
+        box-shadow: 0 6px 10px 0 rgba(0,0,0,0.6);
+        transition: 0.5s;
+    }
+
+    @media screen and (max-width: 800px){
+
+        body{
+            text-align: center;
+        }
+
+        h2,p{
+            text-align: left;
+        }
+        .card img{
+            width:  200px;
+            height: 200px;
+            object-fit: cover;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    .main{
+        margin-top:20px ;
+    }
+        
+    .slide{
+        margin-top: 60px;
+    }
+    
+    marquee{
+        font-size: xx-large;
+    }
+
+    /* ============== Heading and Logo ===================== */
+    .header{
+        background-color: #fff;
+        height: 100%;
+        padding-top:8px ;
+    }
+
+    .header img{
+        width:170px;
+        float:left;
+        margin-left: 5%;
+        box-shadow: 0 8px 10px 0 rgba(0,0,0,0.6);
+    }
+
+    .header h1{
+        text-align: right;
+        font-size: 35px;
+        padding: 20px;
+        color: #000;
+        word-spacing: 0.2em;
+        cursor:pointer;
+    }
+
+    .header .logo{
+        padding-left:8% ;
+    }
+
+    /* ==================Navigation Bar======================== */
+    nav{
+        margin-top:8% ;
+        padding: 10px;
+    }
+
+    nav a{
+        margin-left: 5%;
+        padding: 10px 0;
+        color: #fff;
+        font-size: 20px;
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    a:hover{
+        color:rgba(253, 0, 0, 0.916);
+        transition: 0.5s;
+    }
+
+    hr{
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .about-restaurant{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .header h1:hover{
+        color:rgba(253, 0, 0, 0.916);
+        transition: 0.5s;
+    }
+    </style>
+</head>
+<body>
+    
+    <!-- ====================Heading and logo====================== -->
+    <section class="header">
+            <a href="ContainerMainPage(Intro).html"><img src="Favicon\android-chrome-192x192.png" alt="logo" id = "logo"></a>
+            <h1>
+                <u>Container Management</u>
+            </h1>
+    </section>
+    <!-- ===========================Navigation Bar===================== -->
+    <section class = "navigation">
+        <nav>
+            <a href="ContainerMainPage(Intro).html">Home</a>
+            <a href="About Us.html">About Us</a>
+            <a href="Meet the team.html">Contact Us</a>
+            <a href="Review & Feedback.html">Review & Feedback</a>
+        </nav>
+    </section>
+    <hr>
+
+</body>
+</html>
