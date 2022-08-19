@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container Management App</title>
+    <style>
+        body{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-form{
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+            width: 80%;
+            height: 70vh;
+            padding: 2rem;
+            border-radius: 7px;
+        }
+        select{
+            width: 94%;
+            margin: 1rem;
+            height: 2rem;
+            border-radius: 7px;
+        }
+        input{
+            margin:1rem;
+            height: 2rem;
+            border-radius: 7px;
+        }
+        #success{
+            width: 80%;
+            height: 50px;
+            border: 2px solid green;
+            background-color: rgb(177, 237, 177);
+            margin:10px;
+            border-radius: 7px;
+           display: flex;
+           align-items: center;
+           padding: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            display: none;
+        }
+        #close{
+            margin-left: auto;
+            padding: 5px;
+            border: 2px solid red;
+            border-radius: 6px;
+            background-color: rgb(233, 192, 192);
+            cursor: pointer;
+            
+        }
+        button{
+            margin:1rem;
+            height: 2rem;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+    </style>
+    <script>
+        function containerStatus() {
+            const success = document.getElementById('success');
+            const osName =document.getElementById('ip1').value;
+            const imgName =document.getElementById('ip2').value;
+            success.style.display = "block";
+            console.log(osName +" "+ imgName)
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("success-msg").innerHTML = this.responseText;
+    }
+  xhttp.open("GET", "http://13.232.184.112/runform?con_name="+osName+"&images="+imgName, true);
+  xhttp.send();
+}
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Choose the options to start your own container</h1>
+        <div id="success">
+            <div id="success-msg">hello everyone</div>
+            <button id="close">Close</button>
+        </div>
+        <form class="main-form">
+            <div><h3>Choose a name for your container</h3></div>
+            <input id="ip1" name="con_name">
+            <div class="os-container">
+                <select id="ip2" name="images">
+                    <option>choose you os</option>
+                    <option value="centos">Centos</option>
+                    <option value="ubuntu">Ubuntu</option>
+                </select>
+            </div>
+            
+        </form>
+        <button onclick="containerStatus()">Start Container</button>
+    </div>
+</body>
+</html>
+
